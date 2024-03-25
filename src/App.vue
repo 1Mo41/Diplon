@@ -1,9 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+
+    <div class="header">
+      <div class="logo"></div>
+      <ul class="ul1">
+        <li class="headerLi"><router-link to="/about">О нас</router-link></li>
+        <li class="headerLi"><router-link to="/about">Контакты</router-link></li>
+        <li class="headerLi"><router-link to="/about">Регистрация</router-link></li>
+        <li class="headerLi"><router-link to="/about">Авторизация</router-link></li>
+      </ul>
+
+    </div>
 </template>
 
 <style>
@@ -14,17 +20,14 @@
   text-align: center;
   color: #2c3e50;
 }
+.ul1{
+display: flex;
+  justify-content: flex-end;
+}
+.headerLi{
+  display: inline;
 
-nav {
-  padding: 30px;
+  margin: 5px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
