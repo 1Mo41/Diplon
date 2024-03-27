@@ -13,17 +13,19 @@
     <label class="rega"><button type="submit">Зарегистрироваться</button></label>
 
   </form>
-
+  <FooterMain/>
 </template>
 
 <script>
-import HeaderMain from "@/components/HeaderMain.vue";
+import HeaderMain from '@/components/HeaderMain.vue'
+import FooterMain from '@/components/FooterMain.vue'
 
 export default {
   name: 'CreateUserView',
   components: {
-    HeaderMain
-  }
+    HeaderMain,
+    FooterMain
+  },
 }
 </script>
 <style>

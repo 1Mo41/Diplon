@@ -8,18 +8,21 @@
     <labe class="loginLabel"><button type="submit">Авториация</button></labe>
 
   </form>
+  <FooterMain/>
 </template>
 
 
 
 <script>
-import HeaderMain from "@/components/HeaderMain.vue";
+import HeaderMain from '@/components/HeaderMain.vue'
+import FooterMain from '@/components/FooterMain.vue'
 
 export default {
   name: 'LoginView',
   components: {
-    HeaderMain
-  }
+    HeaderMain,
+    FooterMain
+  },
 }
 </script>
 <style>

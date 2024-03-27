@@ -3,6 +3,7 @@
   <div class="headerL">
     <a href="main" class="headerA">Логотип</a>
   </div>
+    <div class="nameContora"><h1>КООМПОФФ</h1></div>
   <div class="headerR">
     <a href="about" class="headerA">О нас</a>
     <a href="" class="headerA">Контакты</a>
@@ -31,6 +32,10 @@ export default {
 *{
   padding:0;
   margin:0;
+}
+.nameContora{
+  margin-left: 400px;
+  margin-top: 10px ;
 }
 a{
   text-decoration:none;
