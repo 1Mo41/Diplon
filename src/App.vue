@@ -1,15 +1,5 @@
 <template>
-
-    <div class="header">
-      <div class="logo"></div>
-      <ul class="ul1">
-        <li class="headerLi"><router-link to="/about">О нас</router-link></li>
-        <li class="headerLi"><router-link to="/about">Контакты</router-link></li>
-        <li class="headerLi"><router-link to="/about">Регистрация</router-link></li>
-        <li class="headerLi"><router-link to="/about">Авторизация</router-link></li>
-      </ul>
-
-    </div>
+  <router-view/>
 </template>
 
 <style>

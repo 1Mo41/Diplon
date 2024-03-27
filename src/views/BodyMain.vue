@@ -1,16 +1,17 @@
 <template>
   <HeaderMain/>
   <div class="main">
-    <h1>Главная Страничка </h1>
+    <h1>О нас </h1>
   </div>
 
 </template>
 
+
 <script>
-import HeaderMain from '@/components/HeaderMain.vue'
+import HeaderMain from "@/components/HeaderMain.vue";
 
 export default {
-  name: 'HeaderMain',
+  name: 'AboutView',
   components: {
     HeaderMain
   }
