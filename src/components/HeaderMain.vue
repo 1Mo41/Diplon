@@ -5,11 +5,11 @@
   </div>
     <div class="nameContora"><h1>КООМПОФФ</h1></div>
   <div class="headerR">
-    <a href="about" class="headerA">О нас</a>
-    <a href="" class="headerA">Контакты</a>
-    <a href="rega" class="headerA">Регистрация</a>
-    <a href="login" class="headerA">Авторизация</a>
-    <a href="" class="headerA">Онлайн Хелп</a>
+    <a href="about" class="headerA">О нас |</a>
+    <a href="" class="headerA">Контакты |</a>
+    <a href="rega" class="headerA">Регистрация |</a>
+    <a href="login" class="headerA">Авторизация |</a>
+    <a href="" class="headerA">Онлайн Хелп |</a>
 
   </div>
   </div>
@@ -39,12 +39,15 @@ export default {
 }
 a{
   text-decoration:none;
-  color: black;
+  color: #b1daea;
+}
+h1{
+  color: #b1daea;
 }
 .header{
   display: flex;
   justify-content: space-between;
-  background-color: #64DE8B;
+  background-color: #01556a;
   height: 100px;
 }
 .headerL{

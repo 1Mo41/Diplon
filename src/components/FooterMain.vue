@@ -44,6 +44,10 @@
 .footer{
   display: flex;
   justify-content: space-between;
+  background-color: #01556a;
+}
+h3{
+  color:#b1daea;
 }
 .footerL{
   margin-top: 20px;
