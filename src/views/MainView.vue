@@ -3,10 +3,48 @@
   <div class="main">
     <h2 class="str">Главная Страничка </h2>
     <div class="polt">
-<!--      <p >Наша кантора самая лучшая в мире по ремонту ПК, кто не согласен, тот артавод с бутылкой в жопе</p>-->
+      <div class="category">
+        <div class="dropdown">
+          <p>Ремонт</p>
+          <button class="dropbtn">Компьютеры</button>
+          <div class="dropdown-content">
+            <a href="#">Acer</a>
+            <a href="#">Asus</a>
+            <a href="#">Dell</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <p>Ремонт</p>
+          <button class="dropbtn">Телефоны</button>
+          <div class="dropdown-content">
+            <a href="#">Aphone</a>
+            <a href="login">Xiaomi</a>
+            <a href="#">Samsung</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <p>Ремонт</p>
+          <button class="dropbtn">Ноутбуки</button>
+          <div class="dropdown-content">
+            <a href="#">Hp</a>
+            <a href="#">Asus</a>
+            <a href="#">Samsung</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <p>Ремонт</p>
+          <button class="dropbtn">Планшеты</button>
+          <div class="dropdown-content">
+            <a href="#">Samsung</a>
+            <a href="#">Ursus</a>
+            <a href="#">Dexp</a>
+          </div>
+        </div>
+      </div>
     </div>
-
+   
     <div class="fon">
+
       <div class="description">
         <p class="descP">Ремонт компьютеров,ноутбуков и телефонов в Томске </p>
         <ul class="desc">
@@ -22,16 +60,17 @@
     </div>
     <h2><p class="h2">КОМПОФФ — лучшая и самая качественная сервисная сеть
       по ремонту смартфонов и ноутбуков в Томской области</p></h2>
-    <div class="category">
-      <div class="dropdown">
-        <button class="dropbtn">Ремонт</button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div>
+    <div>
+      <Slider v-model="sliderValue" :min="0" :max="100" :step="1" />
     </div>
+  <div class="help">
+    <div class="helpLeft">
+      <p class="consul">
+
+      </p>
+    </div>
+    <div class="helpRight"></div>
+  </div>
   </div>
   <FooterMain/>
 </template>
@@ -39,13 +78,19 @@
 <script>
 import HeaderMain from '@/components/HeaderMain.vue'
 import FooterMain from '@/components/FooterMain.vue'
-
+import Slider from '@/components/Slider.vue';
 export default {
   name: 'MainView',
   components: {
     HeaderMain,
-    FooterMain
+    FooterMain,
+    Slider
   },
+  data() {
+    return {
+      sliderValue: 50
+    };
+  }
 }
 </script>
 
@@ -70,6 +115,7 @@ export default {
 .Kartinka{
   height: 500px;
   width: 50%;
+
 }
 .descP{
   margin-top: 30px;
@@ -106,7 +152,9 @@ body{
   padding: 16px;
   font-size: 16px;
   border: none;
+  margin: 10px;
 }
+
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -140,5 +188,49 @@ body{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.page-title {
+  text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
 
 </style>
