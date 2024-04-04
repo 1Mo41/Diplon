@@ -36,6 +36,20 @@ const routes = [
       return import(/* webpackChunkName: "about" */ '../views/LoginView.vue')
     }
   },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/BodyMain.vue')
+    }
+  },
+  {
+    path: '/help',
+    name: 'Help',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/HelpView.vue')
+    }
+  },
 ]
 
 const router = createRouter({

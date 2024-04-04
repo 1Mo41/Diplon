@@ -63,6 +63,28 @@
     <div>
       <Slider v-model="sliderValue" :min="0" :max="100" :step="1" />
     </div>
+    <div class="calculator">
+      <input type="text" v-model="expression" disabled>
+      <div class="buttons">
+        <button @click="appendToExpression('1690+')">Ремонт стекла</button>
+        <button @click="appendToExpression('200+')">Сим карт</button>
+        <button @click="appendToExpression('3300+')">зарядка</button>
+        <button @click="appendToExpression('+')">Добавить</button>
+        <button @click="appendToExpression('900+')">Крышка</button>
+        <button @click="appendToExpression('200+')">Разьём aux</button>
+        <button @click="appendToExpression('100+')">Деньги</button>
+<!--        <button @click="appendToExpression('-')">-</button>-->
+        <button @click="appendToExpression('800+')">Провод</button>
+        <button @click="appendToExpression('800')">Флешка</button>
+        <button @click="appendToExpression('1')">Сам ремонт</button>
+        <button @click="appendToExpression('923')">Новый телефон</button>
+<!--        <button @click="appendToExpression('')"></button>-->
+<!--        <button @click="appendToExpression('0')">0</button>-->
+<!--        <button @click="appendToExpression('.')">.</button>-->
+        <button @click="clearExpression">Удалить</button>
+        <button @click="calculateResult">Сколько стоит</button>
+      </div>
+    </div>
   <div class="help">
     <div class="helpLeft">
       <p class="consul">
@@ -88,13 +110,54 @@ export default {
   },
   data() {
     return {
-      sliderValue: 50
+      expression: '',
+      coast: 0
     };
+  },
+  methods: {
+    appendToExpression(value) {
+      this.expression += value;
+    },
+    clearExpression() {
+      this.expression = '';
+    },
+    calculateResult() {
+      try {
+        this.expression = eval(this.expression).toString();
+      } catch (error) {
+        console.error('Calculation error:', error);
+        this.expression = 'Error';
+      }
+    },
   }
+
 }
+
 </script>
 
 <style>
+.calculator {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+}
 .fon{
   display: flex;
   justify-content: space-between;

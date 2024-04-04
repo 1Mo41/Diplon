@@ -1,18 +1,14 @@
 <template>
   <HeaderMain/>
   <h2>Регистрация</h2>
-  <form action="" class="registr">
-    <label class="rega">Логин<input type="username" name="" id="22"></label>
-    <label class="rega">Ф.И.О<input type="nameFIO" name="" id="22"></label>
-    <label class="rega">Почта
-    <input type="email" name="emain" id="22"></label>
-    <label class="rega">Пароль
-    <input type="password" name="" id="22"></label>
-    <label class="rega"> Повторите Пароль<input type="password" name="" id="22"></label >
-    <label class="rega"><input type="checkbox" name="" id="">Принять пользовательскиое соглашение</label>
-    <label class="rega"><button type="submit">Зарегистрироваться</button></label>
-
-  </form>
+  <div class="registr">
+  <pre id="jsonPre">{{jsonData}}</pre>
+    <label class="rega">Логин<input id="username" v-model="username" type="text"></label>
+    <label class="rega">Почта<input id="email" v-model="email" type="text"></label>
+    <label class="rega">Пароль<input id="password" v-model="password" type="password"></label>
+  <div id="status" :class="statusClass">{{statusText}}</div>
+    <button @click="onSubmit" ref="button">Зарегистрироваться</button>
+  </div>
   <FooterMain/>
 </template>
 
@@ -26,6 +22,50 @@ export default {
     HeaderMain,
     FooterMain
   },
+  data() {
+    return {
+      email: '',
+      username: '',
+      password: '',
+      statusText: '',
+      statusClass: ''
+    }
+  },
+  methods: {
+    async onSubmit() {
+      this.$refs.button.innerText = "Загрузка...";
+      const res = await fetch("https://5fd54060406a6fc7.mokky.dev/register", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          username: this.username,
+          email: this.email,
+          password: this.password
+        })
+      });
+      this.updateStatus(res.ok);
+      if (res.ok) {
+        const json = await res.json();
+        console.log(json);
+        this.jsonData = JSON.stringify(json, null, 2);
+      }
+      this.$refs.button.innerText = "Зарегистрироваться";
+      console.log(1);
+    },
+    updateStatus(ok) {
+      if (ok) {
+        this.statusText = "Успешно!";
+        this.statusClass = "success";
+      } else {
+        this.statusText = "Не зарегистрирован!";
+        this.statusClass = "error";
+      }
+    }
+  }
+
 }
 </script>
 <style>

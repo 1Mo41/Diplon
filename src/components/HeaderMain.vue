@@ -6,12 +6,13 @@
     <div class="nameContora"><h1>КООМПОФФ</h1></div>
   <div class="headerR">
     <a href="about" class="headerA">О нас |</a>
-    <a href="" class="headerA">Контакты |</a>
+    <a href="contact" class="headerA">Контакты |</a>
     <a href="rega" class="headerA">Регистрация |</a>
     <a href="login" class="headerA">Авторизация |</a>
-    <a href="" class="headerA">Онлайн Хелп |</a>
+    <a href="help" class="headerA">Онлайн Хелп |</a>
 
   </div>
+
   </div>
       <div class="headerLine"></div>
 </template>
@@ -22,7 +23,17 @@
 export default {
   name:'HeaderMain',
   props: {
-    headermain:String
+    headermain: String
+  },
+  data() {
+    return {
+      isDarkMode: false
+    };
+  },
+  methods: {
+    toggleTheme() {
+      this.isDarkMode = !this.isDarkMode;
+    }
   }
 }
 </script>
@@ -32,6 +43,23 @@ export default {
 *{
   padding:0;
   margin:0;
+}
+body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.dark-theme {
+  --bg-color: #333;
+  --text-color: #f0f0f0;
+}
+
+.dark-theme p {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+.dark-theme  {
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 .nameContora{
   margin-left: 400px;
