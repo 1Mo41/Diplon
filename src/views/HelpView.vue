@@ -1,18 +1,42 @@
 <template>
-  <HeaderMain />
-  <div>
-    <input type="text" v-model="question" placeholder="Задайте ваш вопрос">
-    <button @click="getAnswer">Получить ответ</button>
-    <p v-if="answer">{{ answer }}</p>
+  <HeaderMain/>
+  <h2>Возникли вопросы?</h2>
+  <p>Обращайся к нам!</p>
+  <div class="conteiner">
+    <div class="qewst">
+      <h2>Часто задаваемые вопросы</h2>
+      <ul class="liQuest">
+        <li class="quest">Как оформить заказ?</li>
+        <li class="quest">Сколько времени ждать?</li>
+        <li class="quest">Средний чек?</li>
+        <li class="quest">Что делать,если не помогло?</li>
+        <li class="quest">Сколько стоит вызвать мастера на дом?</li>
+        <li class="quest">Как флексить?</li>
+        <li class="quest">Другое</li>
+      </ul>
+    </div>
+    <div class="formQuest">
+      <h2>Поле для задавания вопросов</h2>
+      <div id="quest">
+<!--      <label>Задайте ваш вопрос</label> -->
+      <input type="text" v-model="question" placeholder="Задайте ваш вопрос">
+      <button @click="getAnswer">Получить ответ</button>
+      </div>
+    </div>
+    <div class="answer">
+      <h2>Ответы на вопросы</h2> <br>
+      <h2 v-if="answer">{{ answer }}</h2>
+    </div>
+<!--    <div>-->
+<!--      &lt;!&ndash;    <input type="text" v-model="searchQuery" placeholder="Поиск...">&ndash;&gt;-->
+<!--      &lt;!&ndash;    <ul>&ndash;&gt;-->
+<!--      &lt;!&ndash;      <li v-for="item in filteredItems" :key="item.id">{{ item.name }}</li>&ndash;&gt;-->
+<!--      &lt;!&ndash;    </ul>&ndash;&gt;-->
+<!--    </div>-->
   </div>
-  <div>
-    <input type="text" v-model="searchQuery" placeholder="Поиск...">
-    <ul>
-      <li v-for="item in filteredItems" :key="item.id">{{ item.name }}</li>
-    </ul>
-  </div>
+  <FooterMain/>
 </template>
-  <FooterMain />
+
 <script>
 import HeaderMain from "@/components/HeaderMain.vue";
 import FooterMain from "@/components/FooterMain.vue";
@@ -24,34 +48,46 @@ export default {
     FooterMain
   },
   data() {
-      return {
-        question: '',
-        answer: '',
-        items: [
-          { id: 1, name: 'Элемент 1' },
-          { id: 2, name: 'Элемент 2' },
-          { id: 3, name: 'Элемент 3' }
-        ],
-        searchQuery: ''
-      };
-    },
-    computed: {
-      filteredItems() {
-        return this.items.filter(item => {
-          return item.name.toLowerCase().includes(this.searchQuery.toLowerCase());
-        });
-      }
-    },
+    return {
+      question: '',
+      answer: '',
+      items: [
+        {id: 1, name: 'Элемент 1'},
+        {id: 2, name: 'Элемент 2'},
+        {id: 3, name: 'Элемент 3'}
+      ],
+      searchQuery: ''
+    };
+  },
+  computed: {
+    filteredItems() {
+      return this.items.filter(item => {
+        return item.name.toLowerCase().includes(this.searchQuery.toLowerCase());
+      });
+    }
+  },
   methods: {
     getAnswer() {
       // Простой пример автоматического ответа на вопрос
       if (this.question.endsWith('?') && this.question === 'Как оформить заказ?') {
-        this.answer = 'По телефону 912931923';
-      } else if (this.question.endsWith('?') && this.question === 'Кто?') {
-        this.answer = 'Костя лох';
-      } else if (this.question.endsWith('?') && this.question === 'Кто?') {
-        this.answer = 'Костя лох';
-      } else {
+        this.answer = 'По телефону +79129319123';
+      } else if (this.question.endsWith('?') && this.question === 'Сколько времени ждать?') {
+        this.answer = 'День - два ';
+      } else if (this.question.endsWith('?') && this.question === 'Средний чек?') {
+        this.answer = '1500 - 2000 рублей';
+      } else if (this.question.endsWith('?') && this.question === 'Что делать,если не помогло?') {
+        this.answer = 'Обратитесь по номеру +79129319123 ';
+      } else if (this.question.endsWith('?') && this.question === 'Сколько стоит вызвать мастера на дом?') {
+        this.answer = '1000 рублей';
+      } else if (this.question.endsWith('?') && this.question === 'Как флексить?') {
+        this.answer = 'Ногами';
+      } else if (this.question.endsWith('?') && this.question === 'Костя?') {
+        this.answer = 'ПОШЕЛ НАХУЙ,КОЗЁЛ!!';
+      }
+      else if (this.question === 'Другое') {
+        this.answer = 'Позвоните по номеру :+79129319123. ' +
+            'Вам ответит наш оператор';
+      }else {
         this.answer = 'Пожалуйста, задайте вопрос в форме вопроса.';
       }
 
@@ -61,5 +97,26 @@ export default {
 </script>
 
 <style>
-/* Стили для формы и списка вопросов */
+.formQuest {
+  background-color: #b1daea;
+  height: 400px;
+  width: 400px;
+
+
+}
+.conteiner{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+.liQuest{
+  text-align: left;
+}
+.answer{
+  width: 15%;
+}
+input{
+  margin-top: 100px;
+}
+
 </style>

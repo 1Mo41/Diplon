@@ -1,6 +1,8 @@
 <template>
   <HeaderMain/>
-  <h2>Регистрация</h2>
+  <div class="conteinerCreate">
+  <div class="h2"><h2>Регистрация</h2></div>
+  <div class="formLogin">
   <div class="registr">
   <pre id="jsonPre">{{jsonData}}</pre>
     <label class="rega">Логин<input id="username" v-model="username" type="text"></label>
@@ -8,6 +10,10 @@
     <label class="rega">Пароль<input id="password" v-model="password" type="password"></label>
   <div id="status" :class="statusClass">{{statusText}}</div>
     <button @click="onSubmit" ref="button">Зарегистрироваться</button>
+  </div>
+  </div>
+    <p class="padding">Нажимая расположенную выше кнопку «Зарегистрироваться»,
+      я принимаю условия и соглашаюсь с , <a href="" class="b" >Политикой конфиденциальности</a>, <a href="" class="b">Публичной офертой.</a></p>
   </div>
   <FooterMain/>
 </template>
@@ -75,5 +81,32 @@ export default {
 }
 .rega{
   margin: 20px;
+}
+.conteinerCreate{
+  margin-top:100px;
+  background-color: #b1daea;
+  height: 550px;
+  width: 500px;
+  margin-left: 700px;
+}
+.formLogin{
+  padding-top: 100px;
+}
+.h2{
+  padding-top: 20px;
+}
+input{
+  border-radius: 5px;
+}
+button{
+  width: 200px;
+  margin-top: 100px;
+  margin-left: 160px;
+}
+.b{
+  color: black;
+}
+.padding{
+  margin-top: 20px;
 }
 </style>

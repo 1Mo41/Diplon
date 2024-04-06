@@ -1,7 +1,7 @@
 <template>
   <div class="header">
   <div class="headerL">
-    <a href="main" class="headerA">Логотип</a>
+    <a href="main" class="headerA"><img class="logo" src="../assets/Лого2.png" alt="Лого2"></a>
   </div>
     <div class="nameContora"><h1>КООМПОФФ</h1></div>
   <div class="headerR">
@@ -40,6 +40,10 @@ export default {
 
 
 <style>
+.logo{
+  height: 80px;
+  width: 80px;
+}
 *{
   padding:0;
   margin:0;
@@ -94,5 +98,8 @@ padding: 5px;
 }
 .headerLine{
   border: 1px solid black;
+}
+p,h1,h2,h3,a {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
 }
 </style>

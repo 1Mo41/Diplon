@@ -58,33 +58,17 @@
         <div class="image"></div>
       </div>
     </div>
+
     <h2><p class="h2">КОМПОФФ — лучшая и самая качественная сервисная сеть
       по ремонту смартфонов и ноутбуков в Томской области</p></h2>
-    <div>
-      <Slider v-model="sliderValue" :min="0" :max="100" :step="1" />
-    </div>
-    <div class="calculator">
-      <input type="text" v-model="expression" disabled>
-      <div class="buttons">
-        <button @click="appendToExpression('1690+')">Ремонт стекла</button>
-        <button @click="appendToExpression('200+')">Сим карт</button>
-        <button @click="appendToExpression('3300+')">зарядка</button>
-        <button @click="appendToExpression('+')">Добавить</button>
-        <button @click="appendToExpression('900+')">Крышка</button>
-        <button @click="appendToExpression('200+')">Разьём aux</button>
-        <button @click="appendToExpression('100+')">Деньги</button>
-<!--        <button @click="appendToExpression('-')">-</button>-->
-        <button @click="appendToExpression('800+')">Провод</button>
-        <button @click="appendToExpression('800')">Флешка</button>
-        <button @click="appendToExpression('1')">Сам ремонт</button>
-        <button @click="appendToExpression('923')">Новый телефон</button>
-<!--        <button @click="appendToExpression('')"></button>-->
-<!--        <button @click="appendToExpression('0')">0</button>-->
-<!--        <button @click="appendToExpression('.')">.</button>-->
-        <button @click="clearExpression">Удалить</button>
-        <button @click="calculateResult">Сколько стоит</button>
-      </div>
-    </div>
+
+    <div class="slide"><Slider/></div>
+<!--   <div class="Calcul">-->
+<!--      <Calculator/></div>-->
+    <div class="content">
+      <h2>Качественные детали на популярные модели всегда в наличии</h2>
+
+ </div>
   <div class="help">
     <div class="helpLeft">
       <p class="consul">
@@ -100,13 +84,17 @@
 <script>
 import HeaderMain from '@/components/HeaderMain.vue'
 import FooterMain from '@/components/FooterMain.vue'
+import Calculator from '@/components/Calculator.vue'
+import BodyMain from '@/components/BodyMain.vue'
 import Slider from '@/components/Slider.vue';
 export default {
   name: 'MainView',
   components: {
     HeaderMain,
     FooterMain,
-    Slider
+    Slider,
+    Calculator,
+    BodyMain
   },
   data() {
     return {
@@ -136,27 +124,21 @@ export default {
 </script>
 
 <style>
-.calculator {
-  width: 300px;
-  margin: auto;
-  text-align: center;
+.content{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
-
-input {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
+.slide{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  height: 200px;
 }
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-}
-
-button {
-  padding: 10px;
-  font-size: 18px;
+.slides > img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 .fon{
   display: flex;

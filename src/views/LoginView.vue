@@ -1,7 +1,9 @@
 <template>
   <HeaderMain />
-  <h2>Авторизация</h2>
-  <div id="app">
+  <div class="conteinerLogin">
+   <div class="h2"> <h2>Авторизация</h2></div>
+<div class="formLogin">
+
     <form @submit.prevent="onSubmit">
       <div class="field">
         <div><label for="username">Логин:</label></div>
@@ -14,10 +16,12 @@
       </div>
       <button type="submit">{{ buttonLabel }}</button>
     </form>
+</div>
+  </div>
     <hr />
     <h2 :class="{ 'error': !authorized, 'success': authorized }">{{ statusMessage }}</h2>
 <!--    <pre>{{ jsonResponse }}</pre>-->
-  </div>
+
   <FooterMain />
 </template>
 
@@ -78,5 +82,24 @@ export default {
 }
 .loginLabel{
   margin: 20px;
+}
+.conteinerLogin{
+  margin-top:100px;
+  background-color: #b1daea;
+  height: 500px;
+  width: 500px;
+  margin-left: 700px;
+}
+.formLogin{
+  padding-top: 100px;
+}
+.field{
+  margin: 20px;
+}
+.h2{
+  padding-top: 20px;
+}
+input{
+  border-radius: 5px;
 }
 </style>
