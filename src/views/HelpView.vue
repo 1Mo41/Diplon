@@ -118,5 +118,7 @@ export default {
 input{
   margin-top: 100px;
 }
-
+li{
+  padding: 15px;
+}
 </style>

@@ -1,5 +1,8 @@
 <template>
   <HeaderMain/>
+  <div :class="{ 'dark-theme': isDarkMode }">
+    <button class="button" @click="toggleTheme"></button>
+
   <h2>Контакты</h2>
   <div class="contacts">
   <div class="contact-block">
@@ -21,59 +24,6 @@
     <div class="map">
     <h2 class="with">Карта</h2></div>
   </div>
-  <div :class="{ 'dark-theme': isDarkMode }">
-    <button @click="toggleTheme">Сменить тему</button>
-<!--    <p class="aaa"> To connect to a database via Vue 3.js, you typically don't directly connect from the client-side code (Vue.js) to the database. Instead, you'd typically create a backend server (using Node.js, Python, etc.) that interacts with the database and exposes an API. Then, your Vue.js application can make HTTP requests to this API to fetch or manipulate data.-->
-
-<!--      Here's a general overview of the steps:-->
-
-<!--      Set up a Backend: Create a backend server using a technology like Node.js, Express.js, Python with Flask/Django, etc. This server will handle requests from the Vue.js frontend and interact with the database.-->
-
-<!--      Database Connection: In your backend server code, establish a connection to your database. This could be a SQL database like MySQL, PostgreSQL, or a NoSQL database like MongoDB.-->
-
-<!--      Create API Endpoints: Define routes and controllers in your backend server to handle CRUD operations (Create, Read, Update, Delete) for your data. These routes will interact with your database.-->
-
-<!--      Make HTTP Requests from Vue.js: In your Vue.js components, use libraries like Axios or Fetch API to make HTTP requests to your backend API endpoints.-->
-
-<!--      Handle Responses: Once you receive responses from the backend, update your Vue.js application's state or UI accordingly.-->
-
-<!--      Here's a simple example of how you might fetch data from a backend API in a Vue component-->
-<!--      Set up a Backend: Create a backend server using a technology like Node.js, Express.js, Python with Flask/Django, etc. This server will handle requests from the Vue.js frontend and interact with the database.-->
-
-<!--      Database Connection: In your backend server code, establish a connection to your database. This could be a SQL database like MySQL, PostgreSQL, or a NoSQL database like MongoDB.-->
-
-<!--      Create API Endpoints: Define routes and controllers in your backend server to handle CRUD operations (Create, Read, Update, Delete) for your data. These routes will interact with your database.-->
-
-<!--      Make HTTP Requests from Vue.js: In your Vue.js components, use libraries like Axios or Fetch API to make HTTP requests to your backend API endpoints.-->
-
-<!--      Handle Responses: Once you receive responses from the backend, update your Vue.js application's state or UI accordingly.-->
-
-<!--      Here's a simple example of how you might fetch data from a backend API in a Vue component:-->
-<!--      User-->
-<!--      How to connect to database via vue 3 js?-->
-
-<!--      ChatGPT-->
-<!--      To connect to a database via Vue 3.js, you typically don't directly connect from the client-side code (Vue.js) to the database. Instead, you'd typically create a backend server (using Node.js, Python, etc.) that interacts with the database and exposes an API. Then, your Vue.js application can make HTTP requests to this API to fetch or manipulate data.-->
-
-<!--      Here's a general overview of the steps:-->
-
-<!--      Set up a Backend: Create a backend server using a technology like Node.js, Express.js, Python with Flask/Django, etc. This server will handle requests from the Vue.js frontend and interact with the database.-->
-
-<!--      Database Connection: In your backend server code, establish a connection to your database. This could be a SQL database like MySQL, PostgreSQL, or a NoSQL database like MongoDB.-->
-
-<!--      Create API Endpoints: Define routes and controllers in your backend server to handle CRUD operations (Create, Read, Update, Delete) for your data. These routes will interact with your database.-->
-
-<!--      Make HTTP Requests from Vue.js: In your Vue.js components, use libraries like Axios or Fetch API to make HTTP requests to your backend API endpoints.-->
-
-<!--      Handle Responses: Once you receive responses from the backend, update your Vue.js application's state or UI accordingly.-->
-
-<!--      Here's a simple example of how you might fetch data from a backend API in a Vue component:</p>-->
-
-
-  </div>
-
-
-
 
   <!--  Ещё вернёмся-->
 <!--  <div>-->
@@ -91,6 +41,7 @@
 <!--      Результат: {{ value1 }} + {{ value2 }} + {{ value3 }} = {{ sum }}-->
 <!--    </div>-->
 <!--  </div>-->
+  </div>
   <FooterMain/>
 </template>
 
@@ -120,7 +71,13 @@ export default {
 
 <style>
 
-
+.button{
+  margin-top: 10px;
+  margin-left: 1850px;
+  width:30px;
+  height:30px;
+  background: url("../assets/Tema1.png") no-repeat center center;;
+}
   body {
     background-color: #f0f0f0;
     color: #333;
@@ -151,6 +108,13 @@ p{
 }
 ul{
   padding: 20px;
+}
+li{
+  padding: 10px;
+  list-style-type: none;
+}
+h2{
+  margin: 10px;
 }
 .contact-block{
   margin-left: 50px;

@@ -13,7 +13,7 @@
 export default {
   data() {
     return {
-      images: ['/images/Yelan1.jpg', '/images/Yelan2.jpg', '/images/Yelan3.png'],
+      images: ['/images/Yelan1.jpg', '/images/Yelan2.jpg', '/images/Yelan3.png','/images/Костя.png'],
       currentIndex: 0,
       intervalId: null
     };
@@ -38,22 +38,24 @@ export default {
 
 .dots{
   position:absolute;
-  margin-left:220px;
-  margin-top: 300px;
+  margin-left:450px;
+  margin-top:520px;
 }
 
 .slides {
-  height: 300px;
-  width: 500px;
+  height: 500px;
+  width: 1000px;
 }
 .dots span {
   display: inline-block;
   width: 10px;
   height: 10px;
   background-color: #ccc;
-  margin: 0 5px;
   border-radius: 50%;
   cursor: pointer;
+  margin:5px;
+
+
 }
 
 .dots span.active {

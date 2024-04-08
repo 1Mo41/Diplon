@@ -1,67 +1,59 @@
 <template>
-  <div class="footerLine"></div>
-  <div class="footer">
-
-    <div class="footerL">
-    <h3>Наши соц. Сети</h3>
-      <ul class="seti">
-        <li class="fLi"><a href="" class="footerA">Вк</a></li>
-        <li class="fLi"><a href="" class="footerA">Телеграмм</a></li>
-        <li class="fLi"><a href="" class="footerA">Ватсап</a></li>
-        <li class="fLi"><a href="" class="footerA">Одноклассинки</a></li>
-      </ul>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Мы в социальных сетях</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/yourcompany" target="_blank">Вконтакте</a></li>
+          <li><a href="https://twitter.com/yourcompany" target="_blank">Телеграмм</a></li>
+          <li><a href="https://www.instagram.com/yourcompany" target="_blank">Ватсап</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Наши партнеры</h4>
+        <ul>
+          <li><a href="https://www.partner1.com" target="_blank">Сбербанк</a></li>
+          <li><a href="https://www.partner2.com" target="_blank">Запчасти Томск</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Контакты</h4>
+        <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+        <p>Email: info@yourcompany.com</p>
+      </div>
     </div>
-    <div class="footerR">
-  <h3>Наши партнёры</h3>
-      <ul class="seti">
-        <li class="fLi"><a href="" class="footerA">Запчасти для ПК</a></li>
-        <li class="fLi"><a href="" class="footerA">ТТИТ</a></li>
-        <li class="fLi"><a href="" class="footerA">Сбербанк</a></li>
-        <li class="fLi"><a href="" class="footerA">Армяне</a></li>
-      </ul>
-  </div>
-  </div>
+  </footer>
 </template>
 
-
-
-
-
-
-
-<script>
- export default {
-   name:'FooterMain',
-   props: {
-     footermain:String
-   }
- }
-</script>
 <style>
-.footerLine{
-  border: 1px solid black;
-}
-.footer{
-  display: flex;
-  justify-content: space-between;
+.footer {
   background-color: #01556a;
+  color: #fff;
+  padding: 20px;
 }
-h3{
-  color:#b1daea;
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
 }
-.footerL{
-  margin-top: 20px;
-margin-left: 200px;
+
+.footer-section {
+  margin-bottom: 20px;
 }
-.footerR{
-  margin-right: 200px;
-  margin-top: 20px;
+
+.footer-section h4 {
+  margin-bottom: 10px;
 }
-a{
-  text-decoration: none;
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
 }
 li{
   list-style-type: none;
-  padding: 10px;
 }
 </style>

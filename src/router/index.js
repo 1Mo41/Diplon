@@ -50,6 +50,20 @@ const routes = [
       return import(/* webpackChunkName: "about" */ '../views/HelpView.vue')
     }
   },
+  {
+    path: '/phone',
+    name: 'phone',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/CalculatorCenView.vue')
+    }
+  },
+  {
+    path: '/CreateRequest',
+    name: 'CreateRequest',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/CreateRequestView.vue')
+    }
+  }
 ]
 
 const router = createRouter({

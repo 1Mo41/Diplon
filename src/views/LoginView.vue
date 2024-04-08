@@ -20,20 +20,17 @@
   </div>
     <hr />
     <h2 :class="{ 'error': !authorized, 'success': authorized }">{{ statusMessage }}</h2>
-<!--    <pre>{{ jsonResponse }}</pre>-->
-
   <FooterMain />
 </template>
 
 <script>
 import HeaderMain from '@/components/HeaderMain.vue'
 import FooterMain from '@/components/FooterMain.vue'
-
 export default {
   name: 'CreateUserView',
   components: {
     HeaderMain,
-    FooterMain
+    FooterMain,
   },
   data() {
     return {
