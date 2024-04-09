@@ -13,7 +13,7 @@
 export default {
   data() {
     return {
-      images: ['/images/Yelan1.jpg', '/images/Yelan2.jpg', '/images/Yelan3.png','/images/Костя.png'],
+      images: ['/images/Kartinka1.jpg', '/images/kartinka2.jpg', '/images/kartinka3.jpg'],
       currentIndex: 0,
       intervalId: null
     };

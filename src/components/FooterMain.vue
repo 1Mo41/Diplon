@@ -18,8 +18,8 @@
       </div>
       <div class="footer-section">
         <h4>Контакты</h4>
-        <p>Телефон: +7 (XXX) XXX-XX-XX</p>
-        <p>Email: info@yourcompany.com</p>
+        <p>Телефон: +7-961-095-90-28</p>
+        <p>Email: kompoff@kompoff.com</p>
       </div>
     </div>
   </footer>

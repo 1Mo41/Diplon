@@ -6,10 +6,10 @@
   <h2>Контакты</h2>
   <div class="contacts">
   <div class="contact-block">
-    <h2>Адрес: г. Томск, пр. Комсомольский 37 "Б"</h2>
-    <p>Телефон: +7 (3822) 220-788</p>
-    <p>ИП Лещенко С. Н., ИНН 701708845853, ОГРНИП 310701704600311</p>
-    <p>E-mail: mail@remcom.su</p>
+    <h2>Адрес: г. Томск,Герасименко, 1/13</h2>
+    <p>Телефон: +7 (961) 095-90-28</p>
+    <p>ИП Козлов Е. М., ИНН 7017355029, ОГРНИП 1147017010271</p>
+    <p>kompoff@kompoff.com</p>
     <h2>Выезд мастера и прием звонков: Круглосуточно</h2>
  <ul> <b>Режим работы офиса:</b>
     <li>Понедельник: 10:00-19:00</li>
@@ -25,22 +25,6 @@
     <h2 class="with">Карта</h2></div>
   </div>
 
-  <!--  Ещё вернёмся-->
-<!--  <div>-->
-<!--    <h2>Сложение разных значений</h2>-->
-<!--    <div class="block">-->
-<!--      <button @click="appendToExpression('1690+')">Ремонт стекла</button>-->
-<!--    </div>-->
-<!--    <div class="block">-->
-<!--      <input v-model="value2" type="number" placeholder="Значение 2" />-->
-<!--    </div>-->
-<!--    <div class="block">-->
-<!--      <input v-model="value3" type="number" placeholder="Значение 3" />-->
-<!--    </div>-->
-<!--    <div class="result">-->
-<!--      Результат: {{ value1 }} + {{ value2 }} + {{ value3 }} = {{ sum }}-->
-<!--    </div>-->
-<!--  </div>-->
   </div>
   <FooterMain/>
 </template>

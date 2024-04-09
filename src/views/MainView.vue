@@ -102,9 +102,11 @@
       </div>
       <div class="help">
         <div class="helpLeft">
-       <h2>Оставь свою заяку у нас!</h2>
+       <h2 class="h2">Оставь свою заяку у нас!</h2>
         </div>
-        <a href="CreateRequest">Оставить завявку</a>
+        <div id="createApp">
+        <a class="createRequest" href="CreateRequest">Оставить завявку</a>
+        </div>
         <div class="helpRight"></div>
       </div>
     </div>
@@ -117,7 +119,6 @@
 import HeaderMain from '@/components/HeaderMain.vue'
 import FooterMain from '@/components/FooterMain.vue'
 import Calculator from '@/components/Calculator.vue'
-import BodyMain from '@/components/Mappa.vue'
 import Slider from '@/components/Slider.vue'
 import Filter from '@/components/Filter.vue'
 
@@ -128,7 +129,6 @@ export default {
     FooterMain,
     Slider,
     Calculator,
-    BodyMain,
     Filter
   },
   data() {
@@ -163,6 +163,18 @@ export default {
 </script>
 
 <style>
+#createApp{
+  background-color: #fefefe;
+  margin: auto;
+  width: 50%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 100px;
+}
+.createRequest{
+  font-size: 20px;
+  color: black;
+}
 .button{
   margin-top: 10px;
   margin-left: 1850px;
@@ -187,7 +199,6 @@ body {
 .with {
   color: #f0f0f0;
 }
-
 .dark-theme p {
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -396,4 +407,5 @@ body {
 li{
   list-style-type: none;
 }
+
 </style>

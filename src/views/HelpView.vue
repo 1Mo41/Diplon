@@ -18,7 +18,6 @@
     <div class="formQuest">
       <h2>Поле для задавания вопросов</h2>
       <div id="quest">
-<!--      <label>Задайте ваш вопрос</label> -->
       <input type="text" v-model="question" placeholder="Задайте ваш вопрос">
       <button @click="getAnswer">Получить ответ</button>
       </div>
@@ -27,12 +26,6 @@
       <h2>Ответы на вопросы</h2> <br>
       <h2 v-if="answer">{{ answer }}</h2>
     </div>
-<!--    <div>-->
-<!--      &lt;!&ndash;    <input type="text" v-model="searchQuery" placeholder="Поиск...">&ndash;&gt;-->
-<!--      &lt;!&ndash;    <ul>&ndash;&gt;-->
-<!--      &lt;!&ndash;      <li v-for="item in filteredItems" :key="item.id">{{ item.name }}</li>&ndash;&gt;-->
-<!--      &lt;!&ndash;    </ul>&ndash;&gt;-->
-<!--    </div>-->
   </div>
   <FooterMain/>
 </template>
@@ -51,20 +44,7 @@ export default {
     return {
       question: '',
       answer: '',
-      items: [
-        {id: 1, name: 'Элемент 1'},
-        {id: 2, name: 'Элемент 2'},
-        {id: 3, name: 'Элемент 3'}
-      ],
-      searchQuery: ''
     };
-  },
-  computed: {
-    filteredItems() {
-      return this.items.filter(item => {
-        return item.name.toLowerCase().includes(this.searchQuery.toLowerCase());
-      });
-    }
   },
   methods: {
     getAnswer() {
@@ -79,10 +59,6 @@ export default {
         this.answer = 'Обратитесь по номеру +79129319123 ';
       } else if (this.question.endsWith('?') && this.question === 'Сколько стоит вызвать мастера на дом?') {
         this.answer = '1000 рублей';
-      } else if (this.question.endsWith('?') && this.question === 'Как флексить?') {
-        this.answer = 'Ногами';
-      } else if (this.question.endsWith('?') && this.question === 'Костя?') {
-        this.answer = 'ПОШЕЛ НАХУЙ,КОЗЁЛ!!';
       }
       else if (this.question === 'Другое') {
         this.answer = 'Позвоните по номеру :+79129319123. ' +

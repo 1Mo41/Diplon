@@ -27,7 +27,6 @@ import HeaderMain from "@/components/HeaderMain.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import Slider from "@/components/Slider.vue";
 import Calculator from "@/components/Calculator.vue";
-import BodyMain from "@/components/Mappa.vue";
 import Filter from "@/components/Filter.vue";
 
 export default {
@@ -37,7 +36,6 @@ export default {
     FooterMain,
     Slider,
     Calculator,
-    BodyMain,
     Filter
   },
   data() {
