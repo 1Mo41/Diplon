@@ -10,7 +10,7 @@
         </div>
         <div class="refaDown"> 
           <div class="Rl"><p>Не веришь?</p></div>
-          <div class="Rl"><p>Иди тогда нахуй!</p></div>
+          <div class="Rl"><p>фывфывфыв</p></div>
         </div>
       </div>
       <div class="formLogin">
