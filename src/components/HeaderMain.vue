@@ -3,18 +3,18 @@
   <div class="headerL">
     <a href="main" class="headerA"><img class="logo" src="../assets/Лого2.png" alt="Лого2"></a>
   </div>
-    <div class="nameContora"><h1>КООМПОФФ</h1></div>
+    <div class="nameContora"><h1>КОМПОФФ</h1></div>
   <div class="headerR">
-    <a href="about" class="headerA">О нас |</a>
-    <a href="contact" class="headerA">Контакты |</a>
+    <a href="contact" class="headerA"> | Контакты |</a>
     <a href="rega" class="headerA">Регистрация |</a>
     <a href="login" class="headerA">Авторизация |</a>
     <a href="help" class="headerA">Онлайн Хелп |</a>
+    <a href="poligon" class="headerA">Отзывы |</a>
+    <a href="CreateRequest" class="headerA">Отставить заявку |</a>
 
   </div>
 
   </div>
-      <div class="headerLine"></div>
 </template>
 
 
@@ -66,7 +66,7 @@ body {
   background-color: var(--bg-color);
 }
 .nameContora{
-  margin-left: 400px;
+  margin-left: 600px;
   margin-top: 10px ;
 }
 a{
@@ -79,7 +79,7 @@ h1{
 .header{
   display: flex;
   justify-content: space-between;
-  background-color: #01556a;
+  /* background-color: #01556a; */
   height: 100px;
 }
 .headerL{

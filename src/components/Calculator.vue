@@ -1,6 +1,6 @@
-<template xmlns="http://www.w3.org/1999/html">
+<template>
   <div class="calculator">
-    <label> Сумма</label><input type="text" v-model="expression" disabled>
+    <label>Сумма</label><input type="text" v-model="expression" disabled>
     <div class="buttons">
       <button @click="appendToExpression('1690+')">Ремонт стекла</button>
       <button @click="appendToExpression('200+')">Сим карт</button>
@@ -9,14 +9,10 @@
       <button @click="appendToExpression('900+')">Крышка</button>
       <button @click="appendToExpression('200+')">Разьём aux</button>
       <button @click="appendToExpression('100+')">Деньги</button>
-      <!--        <button @click="appendToExpression('-')">-</button>-->
       <button @click="appendToExpression('800+')">Провод</button>
       <button @click="appendToExpression('800+')">Флешка</button>
       <button @click="appendToExpression('1000')">Сам ремонт</button>
       <button @click="appendToExpression('923+')">Новый телефон</button>
-      <!--        <button @click="appendToExpression('')"></button>-->
-      <!--        <button @click="appendToExpression('0')">0</button>-->
-      <!--        <button @click="appendToExpression('.')">.</button>-->
       <button @click="clearExpression">Удалить</button>
       <button @click="calculateResult">Сколько стоит</button>
     </div>
@@ -80,5 +76,8 @@ button {
   margin: 5px;
   padding: 10px;
   font-size: 18px;
+}
+label{
+color: #fff;
 }
 </style>

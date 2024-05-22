@@ -56,4 +56,7 @@ export default {
   text-decoration: none;
   cursor: pointer;
 }
+body{
+  background:url("../assets/fonchik.jpg")  no-repeat center center;
+}
 </style>

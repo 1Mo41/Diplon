@@ -1,25 +1,38 @@
 <template>
   <HeaderMain />
   <div class="conteinerLogin">
-   <div class="h2"> <h2>Авторизация</h2></div>
-<div class="formLogin">
-
-    <form @submit.prevent="onSubmit">
-      <div class="field">
-        <div><label for="username">Логин:</label></div>
-        <input id="username" v-model="username" type="text">
+  
+    <div class="formLogin">
+    <div class="contLeft">
+      <div class="What">
+        <div class="up"> <img class="imUp" src="../assets/icon1.png" alt=""></div>
+        <div class="up"> <img class="imUp" src="../assets/icon2.png" alt=""></div>
+  
+        
       </div>
 
+      <div class="What">
+        <div class="down"> <img class="imUp" src="../assets/icon3.png" alt=""></div>
+        <div class="down"> <img class="imUp" src="../assets/icon4.png" alt=""></div>        
+    
+      </div>
+    </div>
+    <div class="contRigth">
+      <div class="h2"><h2>Авторизация</h2></div>
+      <form @submit.prevent="onSubmit">
       <div class="field">
-        <div><label for="password">Пароль:</label></div>
-        <input v-model="password" type="password" id="password" required />
+        <input id="username" v-model="username" type="text" placeholder="Login" required >
+      </div>
+      <div class="field">
+        <input v-model="password" type="password" id="password" placeholder="Password" required />
       </div>
       <button type="submit">{{ buttonLabel }}</button>
     </form>
+    <!-- <h2 :class="{ 'error': !authorized, 'success': authorized }">{{ statusMessage }}</h2>
+    <div v-if="authorized" >Привет, хесос {{this.name}}</div> -->
+  </div>
 </div>
   </div>
-    <hr />
-    <h2 :class="{ 'error': !authorized, 'success': authorized }">{{ statusMessage }}</h2>
   <FooterMain />
 </template>
 
@@ -80,23 +93,58 @@ export default {
 .loginLabel{
   margin: 20px;
 }
-.conteinerLogin{
-  margin-top:100px;
-  background-color: #b1daea;
-  height: 500px;
-  width: 500px;
-  margin-left: 700px;
+.footer{
+  margin-top: 200px;
+}
+header{
+  margin-top: 20px;
 }
 .formLogin{
-  padding-top: 100px;
+  display:flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
 }
 .field{
   margin: 20px;
 }
 .h2{
   padding-top: 20px;
+  color: #fff;
+}
+h2,h1{
+  color:#fff;
 }
 input{
   border-radius: 5px;
+}
+body{
+  background:url("../assets/fon2.jpg")  no-repeat center center;
+}
+.error{
+  margin-bottom:80px;
+  margin-top: 20px;
+}
+.imUp{
+  width:150px ;
+  height: 150px;
+  padding: 20px;
+}
+.conteinerLogin{
+  margin-top: 150px;
+}
+.What{
+  display: flex;
+
+}
+label{
+  color: #fff;
+}
+input{
+  height: 30px;
+  width: 200px;
+}
+button{
+  height: 30px;
+  width: 200px;
 }
 </style>

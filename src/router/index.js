@@ -51,10 +51,10 @@ const routes = [
     }
   },
   {
-    path: '/phone',
-    name: 'phone',
+    path: '/samsung',
+    name: 'samsung',
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/CalculatorCenView.vue')
+      return import(/* webpackChunkName: "about" */ '../views/Phone/SamsungView.vue')
     }
   },
   {
@@ -62,6 +62,90 @@ const routes = [
     name: 'CreateRequest',
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/CreateRequestView.vue')
+    }
+  },
+  {
+    path: '/apple',
+    name: 'apple',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Phone/AppleView.vue')
+    }
+  },
+  {
+    path: '/xiaomi',
+    name: 'xiaomi',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Phone/XiaomiView.vue')
+    }
+  },
+  {
+    path: '/asus',
+    name: 'asus',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Laptop/AsusView.vue')
+    }
+  },
+  {
+    path: '/hp',
+    name: 'hp',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Laptop/HpView.vue')
+    }
+  },
+  {
+    path: '/samsungLap',
+    name: 'samsungLap',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Laptop/SamsungLaptopView.vue')
+    }
+  },
+  {
+    path: '/asusDesc',
+    name: 'asusDe',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Desctop/AsusDescView.vue')
+    }
+  },
+  {
+    path: '/dell',
+    name: 'dell',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Desctop/DellView.vue')
+    }
+  },
+  {
+    path: '/acer',
+    name: 'acer',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Desctop/AcerView.vue')
+    }
+  },
+  {
+    path: '/samsungTable',
+    name: 'samsungTable',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Tablet/SamsungTableView.vue')
+    }
+  },
+  {
+    path: '/ursus',
+    name: 'ursus',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Tablet/UrsusView.vue')
+    }
+  },
+  {
+    path: '/dexp',
+    name: 'dexp',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Tablet/DexpView.vue')
+    }
+  },
+  {
+    path: '/poligon',
+    name: 'poligon',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/PoligonView.vue')
     }
   }
 ]

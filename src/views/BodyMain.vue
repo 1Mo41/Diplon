@@ -1,30 +1,26 @@
 <template>
   <HeaderMain/>
-  <div :class="{ 'dark-theme': isDarkMode }">
-    <button class="button" @click="toggleTheme"></button>
-
   <h2>Контакты</h2>
   <div class="contacts">
-  <div class="contact-block">
-    <h2>Адрес: г. Томск,Герасименко, 1/13</h2>
+    <div class="contact-block">
+    <h2>Томская обл, г Томск, ул Вавилова, д 10, кв 10</h2>
     <p>Телефон: +7 (961) 095-90-28</p>
     <p>ИП Козлов Е. М., ИНН 7017355029, ОГРНИП 1147017010271</p>
     <p>kompoff@kompoff.com</p>
     <h2>Выезд мастера и прием звонков: Круглосуточно</h2>
- <ul> <b>Режим работы офиса:</b>
-    <li>Понедельник: 10:00-19:00</li>
-    <li>Вторник: 10:00-19:00</li>
-    <li>Среда: 10:00-19:00</li>
-    <li>Четверг: 10:00-19:00</li>
-    <li>Пятница: 10:00-19:00</li>
-    <li>Суббота: 12:00-17:00</li>
-    <li>Воскресение:Чилим</li>
- </ul>
+    <ul> <b>Режим работы офиса:</b>
+      <li class="li2">Понедельник: 10:00-19:00</li>
+      <li class="li2">Вторник: 10:00-19:00</li>
+      <li class="li2">Среда: 10:00-19:00</li>
+      <li class="li2">Четверг: 10:00-19:00</li>
+      <li class="li2">Пятница: 10:00-19:00</li>
+      <li class="li2">Суббота: 12:00-17:00</li>
+      <li class="li2">Воскресение:Чилим</li>
+    </ul>
+    </div>
+    <div id="mapa" style="height: 500px; width: 500px;" class="map">
+    <Mapa/>
   </div>
-    <div class="map">
-    <h2 class="with">Карта</h2></div>
-  </div>
-
   </div>
   <FooterMain/>
 </template>
@@ -33,12 +29,13 @@
 <script>
 import HeaderMain from "@/components/HeaderMain.vue";
 import FooterMain from "@/components/FooterMain.vue";
-
+import Mapa from "@/components/Mapa.vue";
 export default {
   name: 'CreateUserView',
   components: {
     HeaderMain,
-    FooterMain
+    FooterMain,
+    Mapa,
   },  data() {
     return {
       isDarkMode: false
@@ -54,7 +51,23 @@ export default {
 </script>
 
 <style>
-
+.map{
+  margin-right: 60px;
+}
+#mapa {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1{
+  color: #fff;
+}
+body{
+  background:url("../assets/fonchik.jpg")  no-repeat center center;
+}
 .button{
   margin-top: 10px;
   margin-left: 1850px;
@@ -83,8 +96,9 @@ export default {
   text-align: center;
  line-height: 50px;
 }
-p{
+p,h2,b{
   padding: 10px;
+  color: #fff;
 }
 .contacts{
   display: flex;
@@ -93,12 +107,10 @@ p{
 ul{
   padding: 20px;
 }
-li{
+.li2{
   padding: 10px;
   list-style-type: none;
-}
-h2{
-  margin: 10px;
+  color: #fff;
 }
 .contact-block{
   margin-left: 50px;

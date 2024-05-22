@@ -1,46 +1,43 @@
 <template>
-  <HeaderMain/>
-  <div :class="{ 'dark-theme': isDarkMode }">
-    <button  class="button" @click="toggleTheme"></button>
-
-    <div class="main">
-      <h2 class="str">Главная Страничка </h2>
+  <div class="fonchi">
+    <HeaderMain/>
+      <h2 class="str">Главная Страница </h2>
       <div class="polt">
         <div class="category">
           <div class="dropdown">
             <p>Ремонт</p>
             <button class="dropbtn">Компьютеры</button>
             <div class="dropdown-content">
-              <a href="#">Acer</a>
-              <a href="#">Asus</a>
-              <a href="#">Dell</a>
+              <a href="acer">Acer</a>
+              <a href="asusDesc">Asus</a>
+              <a href="dell">Dell</a>
             </div>
           </div>
           <div class="dropdown">
             <p>Ремонт</p>
             <button class="dropbtn">Телефоны</button>
             <div class="dropdown-content">
-              <a href="#">Aphone</a>
-              <a href="login">Xiaomi</a>
-              <a href="phone">Samsung</a>
+              <a href="apple">Apple</a>
+              <a href="xiaomi">Xiaomi</a>
+              <a href="samsung">Samsung</a>
             </div>
           </div>
           <div class="dropdown">
             <p>Ремонт</p>
             <button class="dropbtn">Ноутбуки</button>
             <div class="dropdown-content">
-              <a href="#">Hp</a>
-              <a href="#">Asus</a>
-              <a href="#">Samsung</a>
+              <a href="hp">Hp</a>
+              <a href="asus">Asus</a>
+              <a href="samsungLap">Samsung</a>
             </div>
           </div>
           <div class="dropdown">
             <p>Ремонт</p>
             <button class="dropbtn">Планшеты</button>
             <div class="dropdown-content">
-              <a href="#">Samsung</a>
-              <a href="#">Ursus</a>
-              <a href="#">Dexp</a>
+              <a href="samsungTable">Samsung</a>
+              <a href="ursus">Ursus</a>
+              <a href="dexp">Dexp</a>
             </div>
           </div>
         </div>
@@ -59,14 +56,13 @@
           <div class="image"></div>
         </div>
       </div>
-
-      <h2><p class="h3">КОМПОФФ — лучшая и самая качественная сервисная сеть
+      <h2 class="h2"><p class="h3">КОМПОФФ — лучшая и самая качественная сервисная сеть
         по ремонту смартфонов и ноутбуков в Томской области</p></h2>
-
+  </div>
+    <div class="fonchi2">
       <div class="slide">
         <Slider/>
       </div>
-
       <!--   <div class="Calcul">-->
       <!--      <Calculator/></div>-->
       <div class="conteiner1">
@@ -75,43 +71,39 @@
         </div>
         <div class="content">
           <div class="cont">
-            <img src="" alt="">
+            <img src="../assets/icon1.png" alt="" height="100px" width="100px">
             <h2 class="Rigth">Бесплатная диагностика</h2>
             <p class="Rigth">Диагностика неисправности бесплатна при продолжении работ. Вы оплачиваете только стоимость работ и только
               за результат.</p>
           </div>
           <div class="cont">
-            <img src="" alt="">
+            <img src="../assets/icon2.png" alt="" height="100px" width="100px">
             <h2 class="Rigth">Выезд в течение 45 минут</h2>
             <p class="Rigth">Мастер выезжает по указанному Вами адресу через 5-7 минут после подтверждения заявки. Выезд мастера не
               оплачивается. Работаем круглосуточно и без выходных.</p>
           </div>
           <div class="cont">
-            <img src="" alt="">
+            <img src="../assets/icon4.png" alt="" height="100px" width="100px">
             <h2 class="Rigth">Гарантия на работы</h2>
             <p class="Rigth">Заключим договор и предоставим гарантийный талон на сервисное обслуживание до 12 месяцев для вашей
               уверенности.</p>
           </div>
           <div class="cont">
-            <img src="" alt="">
+            <img src="../assets/icon3.png" alt="" height="100px" width="100px">
             <h2 class="Rigth">Опытные мастера</h2>
             <p class="Rigth">Сертифицированные специалисты со стажем работы более 10 лет. Собственный склад запчастей. Ремонтируем
               только на качественном оборудовании.</p>
           </div>
         </div>
       </div>
-      <div class="help">
-        <div class="helpLeft">
-       <h2 class="h2">Оставь свою заяку у нас!</h2>
+      <div class="Reiting">
+        <h2>Рейтинг нашего сайта!</h2>
+        <div class="reit">
+          <h3>4,25</h3>
         </div>
-        <div id="createApp">
-        <a class="createRequest" href="CreateRequest">Оставить завявку</a>
-        </div>
-        <div class="helpRight"></div>
       </div>
     </div>
-
-  </div>
+   
   <FooterMain/>
 </template>
 
@@ -163,6 +155,40 @@ export default {
 </script>
 
 <style>
+.reit{
+  margin-top: 15px;
+  
+}
+.Reiting{
+  margin-top: 130px;
+}
+ .fon{
+  padding-top:200px;
+ }
+.footer{
+  padding-top: 200px
+}
+.descP{
+  margin-left:20px;
+}
+li,a,p,h1,h2,h3{
+  color: #fff;
+}
+.h2{
+ margin-top: 100px;
+}
+.fonchi{
+  background:url("../assets/fon2.jpg")  no-repeat;
+}
+footer{
+  background-color: #1C1C1C;
+}
+#app{
+  background-color: #1C1C1C;
+}
+.slide{
+  margin-top:150px;
+}
 #createApp{
   background-color: #fefefe;
   margin: auto;
@@ -186,32 +212,10 @@ export default {
   text-align: left;
   padding-top: 10px;
 }
-body {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.dark-theme {
-  --bg-color: #333;
-  --text-color: #f0f0f0;
-}
-
-.with {
-  color: #f0f0f0;
-}
-.dark-theme p {
-  color: var(--text-color);
-  background-color: var(--bg-color);
-}
 
 .conteiner1 {
   margin-top: 500px;
 }
-
-.conteiner2 {
-
-}
-
 .cont {
   text-align: right;
   margin-left: 50px;
@@ -281,17 +285,13 @@ p {
 
 p, h1, h2, h3, a {
   font-family: "Comic Sans MS", "Arial", sans-serif;
+  color:#fff;
 }
 
 li {
   padding: 10px;
   text-align: start;
   margin-left: 100px;
-}
-
-p {
-  color: black;
-
 }
 
 .h3, .str {
@@ -301,19 +301,14 @@ p {
 
 .polt {
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 00px;
 }
 
 h2 {
   margin-top: 20px;
 }
-
-body {
-  background-color: #dae5ea;
-}
-
 .dropbtn {
-  background-color: #01556a;
+  background-color: grey;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -407,5 +402,4 @@ body {
 li{
   list-style-type: none;
 }
-
 </style>

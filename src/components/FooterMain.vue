@@ -27,7 +27,6 @@
 
 <style>
 .footer {
-  background-color: #01556a;
   color: #fff;
   padding: 20px;
 }
@@ -55,5 +54,8 @@
 }
 li{
   list-style-type: none;
+}
+a{
+  color: #fff;
 }
 </style>

@@ -1,24 +1,35 @@
 <template>
   <HeaderMain/>
-  <div :class="{ 'dark-theme': isDarkMode }">
-    <button class="button " @click="toggleTheme"></button>
+  <!-- <div :class="{ 'dark-theme': isDarkMode }"> -->
+    <!-- <button class="button " @click="toggleTheme"></button> -->
     <div class="conteinerCreate ">
-      <div class="h2"><h2>Регистрация</h2></div>
-      <div class="formLogin">
-        <div class="registr">
-          <pre id="jsonPre">{{ jsonData }}</pre>
-          <label class="rega">Логин<input id="username" v-model="username" type="text"></label>
-          <label class="rega">Почта<input id="email" v-model="email" type="text"></label>
-          <label class="rega">Пароль<input id="password" v-model="password" type="password"></label>
-          <div id="status" :class="statusClass">{{ statusText }}</div>
-          <button @click="onSubmit" ref="button">Зарегистрироваться</button>
+      <div class="regaLeft">
+        <div class="refaUp"> 
+          <div class="Rl"><p>Тут много текста!</p></div>
+          <div class="Rl"><p>Понял</p></div>
+        </div>
+        <div class="refaDown"> 
+          <div class="Rl"><p>Не веришь?</p></div>
+          <div class="Rl"><p>Иди тогда нахуй!</p></div>
         </div>
       </div>
-      <p class="padding">Нажимая расположенную выше кнопку «Зарегистрироваться»,
-        я принимаю условия и соглашаюсь с , <a href="" class="b">Политикой конфиденциальности</a>, <a href="" class="b">Публичной
-          офертой.</a></p>
+      <div class="formLogin">
+        <div class="h2"><h2>Регистрация</h2></div>
+        <div class="registr">
+          <pre id="jsonPre">{{ jsonData }}</pre>
+          <input id="username" v-model="username" type="text" placeholder="Login">
+          <input id="email" v-model="email" type="text" placeholder="Email">
+          <input id="password" v-model="password" type="password" placeholder="Password">
+          <button @click="onSubmit" ref="button">Зарегистрироваться</button>
+          <div id="status" :class="statusClass">{{ statusText }}</div>
+          <!-- <p class="padding">Нажимая расположенную выше кнопку «Зарегистрироваться»,
+          я принимаю условия и соглашаюсь с , <a href="" class="b">Политикой конфиденциальности</a>, <a href="" class="b">Публичной
+          офертой.</a></p> -->
+        </div>
+      </div>
+    
     </div>
-  </div>
+  <!-- </div> -->
   <FooterMain/>
 </template>
 
@@ -71,7 +82,7 @@ export default {
         this.statusText = "Успешно!";
         this.statusClass = "success";
       } else {
-        this.statusText = "Не зарегистрирован!";
+        this.statusText = "Ебать ты бот!";
         this.statusClass = "error";
       }
     },
@@ -83,6 +94,18 @@ export default {
 }
 </script>
 <style>
+.Rl{
+  padding: 5px;
+}
+.regaLeft{
+  display: flex;
+  justify-content:space-around ;
+}
+input,button{
+  width: 200px;
+  height: 30px;
+  margin: 5px
+}
 .registr {
   display: flex;
   flex-direction: column;
@@ -91,31 +114,27 @@ export default {
 .rega {
   margin: 20px;
 }
-
+.footer{
+  margin-top: 300px
+}
 .conteinerCreate {
-  margin-top: 100px;
-  height: 550px;
-  width: 500px;
-  margin-left: 700px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 200px;
+}
+h1{
+  color:#fff ;
 }
 
-.formLogin {
-  padding-top: 100px;
-}
-
-.h2 {
+.h2{
   padding-top: 20px;
+  color: #fff;
 }
 
 input {
   border-radius: 5px;
 }
 
-button {
-  width: 200px;
-  margin-top: 100px;
-  margin-left: 160px;
-}
 
 .b {
   color: black;
@@ -156,5 +175,12 @@ body {
  }
 li{
   list-style-type: none;
+  color: #fff ;
+}
+p{
+  color:#fff;
+}
+body{
+  background:url("../assets/fon2.jpg")  no-repeat center center;
 }
 </style>

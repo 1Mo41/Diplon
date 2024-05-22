@@ -1,5 +1,4 @@
 <template>
-  <body>
   <HeaderMain/>
   <div class="phones">
     <h1 class="h1">Телефоны Samsung</h1>
@@ -16,9 +15,8 @@
   </div>
   <div class="calcul">
     <h2 id="h2">Посчитай сколько обойдётся ремонт!</h2>
-  <Calculator/>
+  <!-- <Calculator/> -->
   </div>
-  </body>
   <FooterMain/>
 
 </template>
@@ -51,7 +49,6 @@ export default {
         {id: 6, name: "Samsung Galaxy A33"},
         {id: 7, name: "Samsung Galaxy A34"},
         {id: 8, name: "Samsung Galaxy Note 3"},
-        // Добавьте другие элементы по вашему выбору
       ]
     };
   },
@@ -62,23 +59,24 @@ export default {
   },
   methods: {
     filterItems() {
-      this.showList = false; // Показать список при вводе текста
+      this.showList = false; 
     },
     toggleList() {
-      this.showList = !this.showList && this.searchQuery != 0; // Переключить видимость списка при клике на кнопку
+      this.showList = !this.showList && this.searchQuery != 0; 
     }
   }
 };
 </script>
 <style>
-.Search {
-  margin-top: 100px
+.Search{
+  height: 450px;
 }
-
-body {
-  height: auto;
+.h1{
+  margin-bottom: 20px;
 }
-
+footer{
+margin-top:00px ;
+}
 .phones {
   max-width: 600px;
   margin: 0 auto;
@@ -102,22 +100,31 @@ li {
   list-style-type: none;
   text-align: left;
   padding: 10px;
+  color: #fff;
 }
-
+a,li,h2,h1,p{
+  color: #fff;
+}
+.FilterA{
+  color: #fff;
+}
 a {
   text-decoration: none;
 
 }
+body{
+  background:url("../assets/fon2.jpg")  no-repeat center center;
 
+}
 .button {
   width: auto;
   height: auto;
 }
 
 .h1 {
-  color: black;
+  color: white;
 }
 #h2{
-  padding-top:50px;
+  padding-top:5px;
 }
 </style>

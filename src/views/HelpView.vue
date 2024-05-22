@@ -10,15 +10,14 @@
         <li class="quest">Сколько времени ждать?</li>
         <li class="quest">Средний чек?</li>
         <li class="quest">Что делать,если не помогло?</li>
-        <li class="quest">Сколько стоит вызвать мастера на дом?</li>
-        <li class="quest">Как флексить?</li>
+        <li class="quest">Сколько стоит вызвать мастера на дом?</li>  
         <li class="quest">Другое</li>
       </ul>
     </div>
     <div class="formQuest">
       <h2>Поле для задавания вопросов</h2>
       <div id="quest">
-      <input type="text" v-model="question" placeholder="Задайте ваш вопрос">
+      <input type="text" v-model="question" placeholder="Задайте ваш вопрос"> <br>
       <button @click="getAnswer">Получить ответ</button>
       </div>
     </div>
@@ -74,12 +73,11 @@ export default {
 
 <style>
 .formQuest {
-  background-color: #b1daea;
+
   height: 400px;
   width: 400px;
-
-
 }
+
 .conteiner{
   display: flex;
   justify-content: space-evenly;
@@ -94,7 +92,16 @@ export default {
 input{
   margin-top: 100px;
 }
-li{
+li,h2,p,h1{
   padding: 15px;
+  color: #fff;
+}
+body{
+  background:url("../assets/fonchik.jpg")  no-repeat center center;
+}
+input,button{
+  height: 30px;
+  width: 200px;
+  margin: 10px;
 }
 </style>

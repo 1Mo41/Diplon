@@ -1,33 +1,31 @@
 <template>
-  <div class="fon">
-    <div class="main-fon-img">
-      <div class="main-fon-backgroundcolor">
-
-        <HeaderMain/>
-        <div class="createRequest">
-          <div>
-            <form @submit.prevent="submitForm">
-              <label for="name">Название телефона:</label>
-              <input type="text" id="name" v-model="name">
-
-              <label for="description">Проблема:</label>
-              <input type="text" id="description" v-model="description">С
-
-              <button type="submit">Отправить заявку</button>
-
-            </form>
+      <HeaderMain/>
+      <h1>Оставить заявку на ремонт</h1>
+        <div class="createRequest">   
+            <div class="leftText">
+              <div>
+                <img class="imgSYKA" src="../assets/icon1.png" alt="">
+                <img class="imgSYKA" src="../assets/icon1.png" alt="">
+                <img class="imgSYKA" src="../assets/icon1.png" alt="">
+                <img class="imgSYKA" src="../assets/icon1.png" alt="">
+              </div>
+              <div>
+                <img class="imgSYKA" src="../assets/icon1.png" alt="">
+                <img class="imgSYKA" src="../assets/icon1.png" alt="">
+                <img class="imgSYKA" src="../assets/icon1.png" alt="">
+                <img class="imgSYKA" src="../assets/icon1.png" alt="">
+              </div>
+              </div>
+              
+              <div class="textRigth">
+               <form @submit.prevent="submitForm">
+                   <input type="text" id="name" v-model="name" placeholder="Название телефона"><br>
+                    <input type="text" id="description" v-model="description" placeholder="Описание проблемы"><br>
+                  <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
           </div>
-
-
-        </div>
-
-        <footer>
-          <FooterMain/>
-        </footer>
-      </div>
-    </div>
-  </div>
-
+  <footer><FooterMain/></footer>
 
 </template>
 <script>
@@ -72,16 +70,32 @@ export default {
 </script>
 <style>
 .createRequest {
-  margin-top:100px;
-  background-color: #b1daea;
-  height: 500px;
-  width: 500px;
-  margin-left: 700px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 200px;
+  margin-bottom:300px;
+  
 }
-
 .img-for-foto {
   width: 500px;
   height: 100%;
 }
-
+body{
+  background:url("../assets/fonchik.jpg")  no-repeat center center;
+}
+input,button{
+  margin: 10px;
+  height: 30px;
+  width: 200px;
+}
+p{
+  color:#fff; 
+}
+.imgSYKA{
+  width: 100px;
+  height:100px ;
+}
+h1{
+  color: #fff;
+}
 </style>
