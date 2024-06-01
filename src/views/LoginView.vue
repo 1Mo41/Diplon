@@ -28,8 +28,6 @@
       </div>
       <button type="submit">{{ buttonLabel }}</button>
     </form>
-    <!-- <h2 :class="{ 'error': !authorized, 'success': authorized }">{{ statusMessage }}</h2>
-    <div v-if="authorized" >Привет, хесос {{this.name}}</div> -->
   </div>
 </div>
   </div>
@@ -86,16 +84,6 @@ export default {
 };
 </script>
 <style>
-.login{
-  display: flex;
-  flex-direction: column;
-}
-.loginLabel{
-  margin: 20px;
-}
-.footer{
-  margin-top: 200px;
-}
 header{
   margin-top: 20px;
 }
@@ -119,10 +107,6 @@ input{
 }
 body{
   background:url("../assets/fon2.jpg")  no-repeat center center;
-}
-.error{
-  margin-bottom:80px;
-  margin-top: 20px;
 }
 .imUp{
   width:150px ;

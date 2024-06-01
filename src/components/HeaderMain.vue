@@ -52,16 +52,8 @@ body {
   background-color: #f0f0f0;
   color: #333;
 }
-.dark-theme {
-  --bg-color: #333;
-  --text-color: #f0f0f0;
-}
 
 .dark-theme p {
-  color: var(--text-color);
-  background-color: var(--bg-color);
-}
-.dark-theme  {
   color: var(--text-color);
   background-color: var(--bg-color);
 }
@@ -79,7 +71,6 @@ h1{
 .header{
   display: flex;
   justify-content: space-between;
-  /* background-color: #01556a; */
   height: 100px;
 }
 .headerL{
@@ -95,9 +86,6 @@ h1{
 }
 .headerA{
 padding: 5px;
-}
-.headerLine{
-  border: 1px solid black;
 }
 p,h1,h2,h3,a {
   font-family: "Comic Sans MS", "Arial", sans-serif;

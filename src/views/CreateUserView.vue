@@ -1,16 +1,14 @@
 <template>
   <HeaderMain/>
-  <!-- <div :class="{ 'dark-theme': isDarkMode }"> -->
-    <!-- <button class="button " @click="toggleTheme"></button> -->
     <div class="conteinerCreate ">
       <div class="regaLeft">
-        <div class="refaUp"> 
-          <div class="Rl"><p>Тут много текста!</p></div>
-          <div class="Rl"><p>Понял</p></div>
+        <div class="refaUp">
+          <div class="Rl"><p>Выбирай нас!</p></div>
+          <div class="Rl"><p>А также</p></div>
         </div>
-        <div class="refaDown"> 
-          <div class="Rl"><p>Не веришь?</p></div>
-          <div class="Rl"><p>фывфывфыв</p></div>
+        <div class="refaDown">
+          <div class="Rl"><p>Гарантия и качество</p></div>
+          <div class="Rl"><p>Низкие цены</p></div>
         </div>
       </div>
       <div class="formLogin">
@@ -22,14 +20,12 @@
           <input id="password" v-model="password" type="password" placeholder="Password">
           <button @click="onSubmit" ref="button">Зарегистрироваться</button>
           <div id="status" :class="statusClass">{{ statusText }}</div>
-          <!-- <p class="padding">Нажимая расположенную выше кнопку «Зарегистрироваться»,
-          я принимаю условия и соглашаюсь с , <a href="" class="b">Политикой конфиденциальности</a>, <a href="" class="b">Публичной
-          офертой.</a></p> -->
+
         </div>
       </div>
-    
+
     </div>
-  <!-- </div> -->
+
   <FooterMain/>
 </template>
 
